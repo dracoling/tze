@@ -386,9 +386,6 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	    paf->bitvector
 	    );
     }
-#ifdef IMC
-    imc_savechar( ch, fp );
-#endif
     fprintf( fp, "End\n\n" );
     return;
 }
@@ -620,9 +617,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
         ch->lvl2[foo] = -1;
      ch->adept_level = -1;
 
-#ifdef IMC
-    imc_initchar( ch );
-#endif
 
      for ( cnt = 0; cnt < MAX_ALIASES; cnt++ )
      {
@@ -1197,10 +1191,6 @@ void fread_char( CHAR_DATA *ch, FILE *fp )
                break;
              }
             }
-#ifdef IMC
-           if( ( fMatch = imc_loadchar( ch, fp, word ) ) )
-                break;
-#endif
 	    break;
 	
 	

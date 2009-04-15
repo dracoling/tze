@@ -151,9 +151,6 @@ int main( int argc, char **argv )
     struct timeval now_time;
     bool fCopyOver = FALSE; /* HOTreboot??? Well is it...is it???? - Flar */
     extern int abort_threshold;
-#ifdef IMC
-   int imcsocket = -1;
-#endif
 
     /*
      * Init time.
@@ -193,9 +190,6 @@ int main( int argc, char **argv )
 	{
 		fCopyOver = TRUE;
 		control = atoi(argv[3]);
-#ifdef IMC
-	   imcsocket = atoi( argv[4] );
-#endif
 	}
 
 	else
@@ -219,10 +213,6 @@ int main( int argc, char **argv )
     init_alarm_handler();
     boot_db( fCopyOver );
 
-#ifdef IMC
-    imc_startup( FALSE, imcsocket, fCopyOver );
-#endif
-
    	if (fCopyOver)
         {
           extern bool disable_timer_abort;
@@ -236,10 +226,6 @@ int main( int argc, char **argv )
     game_loop_unix( control );
 
     close( control );
-
-#ifdef IMC
-   imc_shutdown( FALSE );
-#endif
 
     /*
      * That's all, folks.
@@ -478,10 +464,6 @@ void game_loop_unix( int control )
 		d->incomm[0]    = '\0';
 	    }
 	}
-
-#ifdef IMC
-	imc_loop();
-#endif
 
 	/*
 	 * Autonomous game motion.
@@ -3247,10 +3229,6 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
 	
 	fclose (fpReserve);
 	
-#ifdef IMC
-   imc_hotboot();
-#endif
-
 	/* exec - descriptors are inherited */
 	
 	sprintf (buf, "%d", port);
@@ -3263,14 +3241,7 @@ void do_hotreboot (CHAR_DATA *ch, char * argument)
  	signal(SIGPROF, SIG_IGN);
  #endif
 
-#ifdef IMC
-   if( this_imcmud )
-      snprintf( buf3, 100, "%d", this_imcmud->desc );
-   else
-      strncpy( buf3, "-1", 100 );
-#else
    strncpy( buf3, "-1", 100 );
-#endif
 
 	execl (EXE_FILE, "ACK! MUD", buf, "HOTreboot", buf2, buf3, (char *) NULL);
 

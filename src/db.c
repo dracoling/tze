@@ -2759,9 +2759,6 @@ void free_char( CHAR_DATA *ch )
 	{
 	   free_string( ch->pcdata->pedit_string[cnt] );  
 	}
-#ifdef IMC
-	imc_freechardata( ch );
-#endif
 	PUT_FREE(ch->pcdata, pcd_free);
     }
 

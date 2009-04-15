@@ -1886,9 +1886,6 @@ struct  char_data
 
 };
 
-#ifdef IMC
-   #include "imc.h"
-#endif
 
 /*
  * Data which only PC's have.
@@ -1967,9 +1964,6 @@ struct  pc_data
     short	ruler_rank;
     char *	pedit_state;
     char *	pedit_string[5];
-#ifdef IMC
-    IMC_CHARDATA *imcchardata;
-#endif
 
 };
 
