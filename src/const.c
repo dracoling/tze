@@ -220,15 +220,15 @@ const   struct  clan_type      clan_table     [MAX_CLAN]     =
 	},
 
 	{
-		"Here be @@rDragons@@N", "@@G(@@R>.<@@G)@@N",       0, 0, 
+		"Here be @@rDragons@@N", "@@G(@@R>.<@@G)@@N",       3021, 3001, 
 		"Dracoling", " ", { -1, -1, -1, -1 }
-		
+
 	},
-	
+
 	{
-		"@@pS@@migma @@pA@@mlpha @@pM@@mu@@N", "@@d=@@pSAM@@d=@@N",       0, 0, 
+		"@@pS@@migma @@pA@@mlpha @@pM@@mu@@N", "@@d=@@pSAM@@d=@@N",       3021, 3001, 
 		"David Stern", " ", { -1, -1, -1, -1 }
-		
+
 	},
 
 	{
