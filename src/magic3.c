@@ -1952,7 +1952,7 @@ void do_stance( CHAR_DATA *ch, char *argument )
                  || ( ch->lvl2[3] > 10 ) ) /* necro */
                 sprintf( cat_buf, "%s\n\r", stance_app[i].name );
               break;
-        case STANCE_AMBUSH :
+        case STANCE_NINJA :
               if ( ch->lvl2[1] > 30 ) /* assassin */
                 sprintf( cat_buf, "%s\n\r", stance_app[i].name ); break;
         case STANCE_AC_BEST :
@@ -2023,7 +2023,7 @@ void do_stance( CHAR_DATA *ch, char *argument )
                 legal_stance = TRUE;
                 break;
               } break;
-        case STANCE_AMBUSH :
+        case STANCE_NINJA :
               if ( ch->lvl2[1] > 30 ) /* assassin */
               {
                 CHAR_DATA * other;

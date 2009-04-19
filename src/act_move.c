@@ -107,7 +107,7 @@ void move_char( CHAR_DATA *ch, int door )
 	return;
     }
     if (  !IS_NPC( ch )
-       && (  ( ch->stance == STANCE_AMBUSH )
+       && (  ( ch->stance == STANCE_NINJA )
           || ( ch->stance == STANCE_AC_BEST )  )  )
     {
       send_to_char( "You step out of the shadows.\n\r", ch );

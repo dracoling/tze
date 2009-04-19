@@ -2237,7 +2237,7 @@ bool can_see( CHAR_DATA *ch, CHAR_DATA *victim )
 	return FALSE;
 
     if (  !IS_NPC( victim )
-       && ( victim->stance == STANCE_AMBUSH ) )
+       && ( victim->stance == STANCE_NINJA ) )
       return FALSE;
 
     if ( ( IS_AFFECTED(victim, AFF_INVISIBLE) || item_has_apply( victim, ITEM_APPLY_INV ) )

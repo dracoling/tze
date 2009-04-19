@@ -468,7 +468,7 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
            safe_strcat(MAX_STRING_LENGTH, buf, " is here" );
            if (  !IS_NPC( victim )
               && ( victim->stance > 0 ) 
-              && ( victim->stance != STANCE_AMBUSH ) )
+              && ( victim->stance != STANCE_NINJA ) )
            {
              char stance_buf[MSL];
              sprintf( stance_buf, " in the Stance of the %s.", stance_app[victim->stance].name );

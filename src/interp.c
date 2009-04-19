@@ -759,7 +759,7 @@ void interpret( CHAR_DATA *ch, char *argument )
      * Dispatch the command.
      */
     if (  !IS_NPC( ch )
-       && (  ( ch->stance == STANCE_AMBUSH     )
+       && (  ( ch->stance == STANCE_NINJA     )
           || ( ch->stance == STANCE_AC_BEST    )     )  
        && (  ( str_prefix( command, "kill"     ) )
           && ( str_prefix( command, "murder"   ) )

@@ -553,7 +553,7 @@ void multi_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
     }
 
      if (  !IS_NPC( ch )
-       && (  ( ch->stance == STANCE_AMBUSH )
+       && (  ( ch->stance == STANCE_NINJA )
           || ( ch->stance == STANCE_AC_BEST )  )  )
     {
       send_to_char( "You step out of the shadows.\n\r", ch );

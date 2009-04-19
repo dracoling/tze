@@ -227,7 +227,7 @@ typedef unsigned char                   bool;
 
 #define STANCE_WARRIOR		0
 #define STANCE_CASTER		1
-#define STANCE_AMBUSH		2
+#define STANCE_NINJA		2
 #define STANCE_AC_BEST		3
 #define STANCE_HR_BEST		4
 #define STANCE_DR_BEST		5
